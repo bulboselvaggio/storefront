@@ -4,11 +4,9 @@ import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
 import { defineConfig, envField } from 'astro/config';
 
-// https://astro.build/config
 export default defineConfig({
 	integrations: [tailwind({ applyBaseStyles: false }), icon(), solidJs()],
-	// Update to your storefront URL
-	site: 'https://shop.astro.build',
+	site: 'https://astrostorefront.netlify.app',
 	output: 'server',
 	adapter: netlify({ imageCDN: true }),
 	vite: {
@@ -19,12 +17,9 @@ export default defineConfig({
 		},
 	},
 	image: {
-		// Update to your own image domains
 		domains: [
 			'localhost',
-			'shop-next.astro.build',
-			'shop.astro.build',
-			'main--astro-swag-shop.netlify.app',
+			'astrostorefront.netlify.app',
 		],
 	},
 	experimental: {
@@ -33,8 +28,7 @@ export default defineConfig({
 				STRIPE_SECRET_KEY: envField.string({
 					context: 'server',
 					access: 'secret',
-					// This is a random test key
-					default: 'sk_test_4eC39HqLyjWDarjtT1zdp7dc',
+					default: 'sk_test_51JP2syLYHI0LeDzUHYpQ5ODAmAZADfWrwNS1fz8zpxLtyMKXqfMdMp77a4dKjpEh5WmLlQij2fGRgpoUt6yS1NXV00z37gX0Zr',
 				}),
 				FATHOM_SITE_ID: envField.string({
 					context: 'client',
@@ -71,7 +65,6 @@ export default defineConfig({
 					access: 'public',
 					optional: true,
 				}),
-				// Used by the Astro team for our internal backend
 				SHOP_API_URL: envField.string({
 					context: 'server',
 					access: 'public',
@@ -85,10 +78,12 @@ export default defineConfig({
 				US_SHIPPING_RATE_ID: envField.string({
 					context: 'server',
 					access: 'secret',
+					default: 'shr_1QUBcPLYHI0LeDzU6cdaJjEf', // shipping standard
 				}),
 				INTERNATIONAL_SHIPPING_RATE_ID: envField.string({
 					context: 'server',
 					access: 'secret',
+					default: 'shr_1QUBjmLYHI0LeDzUQx8jlhad', // shipping international
 				}),
 			},
 		},

@@ -33,7 +33,7 @@ export const POST: APIRoute = async (context) => {
 			};
 			return {
 				price_data: {
-					currency: 'usd',
+					currency: 'eur',
 					product_data: {
 						name: item.productVariant.product.name,
 						description:
