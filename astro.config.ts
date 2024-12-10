@@ -19,7 +19,7 @@ export default defineConfig({
 	image: {
 		domains: [
 			'localhost',
-      'shop.astro.build',
+      'a.storyblok.com',
 			'astrostorefront.netlify.app',
 		],
 	},

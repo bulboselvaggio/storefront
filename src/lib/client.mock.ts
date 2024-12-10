@@ -150,7 +150,7 @@ const collections: Record<string, Collection> = {
 		name: 'Apparel',
 		description: 'Wear your love for Astro on your sleeve.',
 		slug: 'apparel',
-		imageUrl: '/assets/shirts.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/1193x1193/e53d6d5925/shirts.png',
 		...collectionDefaults,
 	},
 	stickers: {
@@ -158,7 +158,7 @@ const collections: Record<string, Collection> = {
 		name: 'Stickers',
 		description: 'Load up those laptop lids with Astro pride.',
 		slug: 'stickers',
-		imageUrl: '/assets/astro-sticker-pack.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/748x748/ef62bea863/astro-sticker-pack.png',
 		...collectionDefaults,
 	},
 	bestSellers: {
@@ -166,7 +166,7 @@ const collections: Record<string, Collection> = {
 		name: 'Best Sellers',
 		description: "You'll love these.",
 		slug: 'best-sellers',
-		imageUrl: '/assets/astro-houston-sticker.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/426x426/60f0ab28af/astro-houston-sticker.png',
 		...collectionDefaults,
 	},
 };
@@ -206,7 +206,7 @@ const products: Record<string, Product> = {
 		tagline:
 			'No need to compress this .zip. The Zip Up Hoodie is a comfortable fit and fabric for all sizes.',
 		price: 4500,
-		imageUrl: '/assets/astro-zip-up-hoodie.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/919x919/c44a30d7ed/astro-zip-up-hoodie.png',
 		collectionIds: ['apparel', 'bestSellers'],
 		variants: apparelVariants,
 	},
@@ -217,7 +217,7 @@ const products: Record<string, Product> = {
 		slug: 'astro-logo-curve-bill-snapback-cap',
 		tagline: 'The best hat for any occasion, no cap.',
 		price: 2500,
-		imageUrl: '/assets/astro-cap.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/804x804/4c74bdc2ae/astro-cap.png',
 		collectionIds: ['apparel'],
 	},
 	'astro-sticker-sheet': {
@@ -227,7 +227,7 @@ const products: Record<string, Product> = {
 		slug: 'astro-sticker-sheet',
 		tagline: "You probably want this for the fail whale sticker, don't you?",
 		price: 1000,
-		imageUrl: '/assets/astro-universe-stickers.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/997x997/e5b8429c77/astro-universe-stickers.png',
 		collectionIds: ['stickers'],
 	},
 	'sticker-pack': {
@@ -237,7 +237,7 @@ const products: Record<string, Product> = {
 		slug: 'sticker-pack',
 		tagline: 'Jam packed with the most popular stickers.',
 		price: 500,
-		imageUrl: '/assets/astro-sticker-pack.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/748x748/ef62bea863/astro-sticker-pack.png',
 		collectionIds: ['stickers', 'bestSellers'],
 	},
 	'astro-icon-unisex-shirt': {
@@ -247,7 +247,7 @@ const products: Record<string, Product> = {
 		slug: 'astro-icon-unisex-shirt',
 		tagline: 'A comfy Tee with the classic Astro logo.',
 		price: 1775,
-		imageUrl: '/assets/astro-unisex-tshirt.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/905x905/5529281d23/astro-unisex-tshirt.png',
 		collectionIds: ['apparel'],
 		variants: apparelVariants,
 	},
@@ -258,7 +258,7 @@ const products: Record<string, Product> = {
 		slug: 'astro-icon-gradient-sticker',
 		tagline: "There gradi-ain't a better sticker than the classic Astro logo.",
 		price: 200,
-		imageUrl: '/assets/astro-icon-sticker.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/724x724/55eb8f19b1/astro-icon-sticker.png',
 		collectionIds: ['stickers', 'bestSellers'],
 	},
 	'astro-logo-beanie': {
@@ -268,7 +268,7 @@ const products: Record<string, Product> = {
 		slug: 'astro-logo-beanie',
 		tagline: "There's never Bean a better hat for the winter season.",
 		price: 1800,
-		imageUrl: '/assets/astro-beanie.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/789x789/8af3a775e3/astro-beanie.png',
 		collectionIds: ['apparel', 'bestSellers'],
 	},
 	'lighthouse-100-sticker': {
@@ -278,7 +278,7 @@ const products: Record<string, Product> = {
 		slug: 'lighthouse-100-sticker',
 		tagline: 'Bad performance? Not in my (light) house.',
 		price: 500,
-		imageUrl: '/assets/astro-lighthouse-sticker.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/537x537/bc47189f9c/astro-lighthouse-sticker.png',
 		collectionIds: ['stickers'],
 	},
 	'houston-sticker': {
@@ -289,7 +289,7 @@ const products: Record<string, Product> = {
 		tagline: 'You can fit a Hous-ton of these on any laptop lid.',
 		price: 250,
 		discount: 100,
-		imageUrl: '/assets/astro-houston-sticker.png',
+		imageUrl: 'https://a.storyblok.com/f/297215/426x426/60f0ab28af/astro-houston-sticker.png',
 		collectionIds: ['stickers', 'bestSellers'],
 	},
 };
