@@ -11,6 +11,7 @@ import {
 	removeItemFromCart,
 	updateCartItemQuantity,
 } from '~/features/cart/cart.ts';
+import { v4 as uuidv4 } from 'uuid';
 
 export const cart = {
 	get: defineAction({
@@ -36,7 +37,7 @@ export const cart = {
 				});
 			}
 
-			const lineItem = expandLineItem({ ...input, id: crypto.randomUUID() }, product);
+			const lineItem = expandLineItem({ ...input, id: uuidv4() }, product);
 
 			if (lineItem.quantity > lineItem.productVariant.stock) {
 				throw new ActionError({

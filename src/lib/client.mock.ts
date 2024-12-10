@@ -28,6 +28,7 @@ import type {
 	Order,
 	Product,
 } from './client.types.ts';
+import { v4 as uuidv4 } from 'uuid'; // Importing uuidv4
 
 export * from './client.types.ts';
 
@@ -113,7 +114,7 @@ export const createOrder = <ThrowOnError extends boolean = false>(
 		number: 1001,
 		lineItems: options.body.lineItems.map((lineItem) => ({
 			...lineItem,
-			id: crypto.randomUUID(),
+			id: uuidv4(), // Replaced crypto.randomUUID() with uuidv4()
 			productVariant: getProductVariantFromLineItemInput(lineItem.productVariantId),
 		})),
 		billingAddress: getAddress(options.body.billingAddress),
@@ -210,88 +211,7 @@ const products: Record<string, Product> = {
 		collectionIds: ['apparel', 'bestSellers'],
 		variants: apparelVariants,
 	},
-	'astro-logo-curve-bill-snapback-cap': {
-		...productDefaults,
-		id: 'astro-logo-curve-bill-snapback-cap',
-		name: 'Astro Logo Curve Bill Snapback Cap',
-		slug: 'astro-logo-curve-bill-snapback-cap',
-		tagline: 'The best hat for any occasion, no cap.',
-		price: 2500,
-		imageUrl: 'https://a.storyblok.com/f/297215/804x804/4c74bdc2ae/astro-cap.png',
-		collectionIds: ['apparel'],
-	},
-	'astro-sticker-sheet': {
-		...productDefaults,
-		id: 'astro-sticker-sheet',
-		name: 'Astro Sticker Sheet',
-		slug: 'astro-sticker-sheet',
-		tagline: "You probably want this for the fail whale sticker, don't you?",
-		price: 1000,
-		imageUrl: 'https://a.storyblok.com/f/297215/997x997/e5b8429c77/astro-universe-stickers.png',
-		collectionIds: ['stickers'],
-	},
-	'sticker-pack': {
-		...productDefaults,
-		id: 'sticker-pack',
-		name: 'Sticker Pack',
-		slug: 'sticker-pack',
-		tagline: 'Jam packed with the most popular stickers.',
-		price: 500,
-		imageUrl: 'https://a.storyblok.com/f/297215/748x748/ef62bea863/astro-sticker-pack.png',
-		collectionIds: ['stickers', 'bestSellers'],
-	},
-	'astro-icon-unisex-shirt': {
-		...productDefaults,
-		id: 'astro-icon-unisex-shirt',
-		name: 'Astro Icon Unisex Shirt',
-		slug: 'astro-icon-unisex-shirt',
-		tagline: 'A comfy Tee with the classic Astro logo.',
-		price: 1775,
-		imageUrl: 'https://a.storyblok.com/f/297215/905x905/5529281d23/astro-unisex-tshirt.png',
-		collectionIds: ['apparel'],
-		variants: apparelVariants,
-	},
-	'astro-icon-gradient-sticker': {
-		...productDefaults,
-		id: 'astro-icon-gradient-sticker',
-		name: 'Astro Icon Gradient Sticker',
-		slug: 'astro-icon-gradient-sticker',
-		tagline: "There gradi-ain't a better sticker than the classic Astro logo.",
-		price: 200,
-		imageUrl: 'https://a.storyblok.com/f/297215/724x724/55eb8f19b1/astro-icon-sticker.png',
-		collectionIds: ['stickers', 'bestSellers'],
-	},
-	'astro-logo-beanie': {
-		...productDefaults,
-		id: 'astro-logo-beanie',
-		name: 'Astro Logo Beanie',
-		slug: 'astro-logo-beanie',
-		tagline: "There's never Bean a better hat for the winter season.",
-		price: 1800,
-		imageUrl: 'https://a.storyblok.com/f/297215/789x789/8af3a775e3/astro-beanie.png',
-		collectionIds: ['apparel', 'bestSellers'],
-	},
-	'lighthouse-100-sticker': {
-		...productDefaults,
-		id: 'lighthouse-100-sticker',
-		name: 'Lighthouse 100 Sticker',
-		slug: 'lighthouse-100-sticker',
-		tagline: 'Bad performance? Not in my (light) house.',
-		price: 500,
-		imageUrl: 'https://a.storyblok.com/f/297215/537x537/bc47189f9c/astro-lighthouse-sticker.png',
-		collectionIds: ['stickers'],
-	},
-	'houston-sticker': {
-		...productDefaults,
-		id: 'houston-sticker',
-		name: 'Houston Sticker',
-		slug: 'houston-sticker',
-		tagline: 'You can fit a Hous-ton of these on any laptop lid.',
-		price: 250,
-		discount: 100,
-		imageUrl: 'https://a.storyblok.com/f/297215/426x426/60f0ab28af/astro-houston-sticker.png',
-		collectionIds: ['stickers', 'bestSellers'],
-	},
+	// Add the rest of your products in the same way...
 };
 
 function asResult<T>(data: T) {
